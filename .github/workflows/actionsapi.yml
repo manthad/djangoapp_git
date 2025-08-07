@@ -29,6 +29,7 @@ jobs:
         with:
           platforms: linux/amd64
           context: .
-          file: ./Dockerfile
+          file: Dockerfile
           push: true
           tags: manthad/djangoapp-demo:latest
+
