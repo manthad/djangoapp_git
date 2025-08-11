@@ -32,4 +32,5 @@ jobs:
           file: Dockerfile
           push: true
           tags: manthad/djangoapp-demo:latest
+          
 
