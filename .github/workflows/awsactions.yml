@@ -16,8 +16,15 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo docker stop fastapi_container || true
-            sudo docker rm fastapi_container || true
-            sudo docker rmi manthad/fastapi-demo:latest || true
-            sudo docker pull manthad/fastapi-demo:latest
-            sudo docker run -d --name ec2-fastapi-container -p 8000:8000 manthad/fastapi-demo:latest
+            sudo docker stop ec2-django-container || true
+            sudo docker rm ec2-django-container || true
+            sudo docker rmi manthad/djangoapp-demo:latest || true
+            sudo docker pull manthad/djangoapp-demo:latest
+            sudo docker run -d --name ec2-django-container -p 8001:8000 manthad/djangoapp-demo:latest
+
+            # sudo docker stop fastapi_container || true
+            # sudo docker rm fastapi_container || true
+            # sudo docker rmi manthad/fastapi-demo:latest || true
+            # sudo docker pull manthad/fastapi-demo:latest
+            # sudo docker run -d --name ec2-fastapi-container -p 8000:8000 manthad/fastapi-demo:latest
+
