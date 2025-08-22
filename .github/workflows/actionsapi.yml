@@ -23,12 +23,12 @@ jobs:
           platforms: linux/amd64
           # file: ./Dockerfile
           push: true
-          tags: manthad/djangoapp-demo:latest
-      - name: Docker build and push docker image
-        uses: docker/build-push-action@v6
-        with:
-          platforms: linux/amd64
-          context: .
-          file: Dockerfile
-          push: true
-          tags: manthad/djangoapp-demo:latest
+          tags: manthad/djangoapp-demo:v1
+      # - name: Docker build and push docker image
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     platforms: linux/amd64
+      #     context: .
+      #     file: Dockerfile
+      #     push: true
+      #     tags: manthad/djangoapp-demo:v1
